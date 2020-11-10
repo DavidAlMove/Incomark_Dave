@@ -73,3 +73,16 @@ C:\Users\David Ramirez\Documents\Personal\IncomarkProyect\Incomark_Robot_1.5\Inc
 C:\Users\David Ramirez\Documents\Personal\IncomarkProyect\Incomark_Robot_1.5\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1.1.exe
 C:\Users\David Ramirez\Documents\Personal\IncomarkProyect\Incomark_Robot_1.5\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1.1.xml
 C:\Users\David Ramirez\Documents\Personal\IncomarkProyect\Incomark_Robot_1.5\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1.1.pdb
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\bin\Debug\Incomark_Robot_1.1.exe.config
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\bin\Debug\Incomark_Robot_1.1.exe
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\bin\Debug\Incomark_Robot_1.1.pdb
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\bin\Debug\Incomark_Robot_1.1.xml
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1.1.vbprojAssemblyReference.cache
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1.1.vbproj.ResolveComReference.cache
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1._1.Form1.resources
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1._1.Resources.resources
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1.1.vbproj.GenerateResource.cache
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1.1.vbproj.CoreCompileInputs.cache
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1.1.exe
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1.1.xml
+C:\Users\david\Documents\.git\Incomark_Dave\Incomark_Robot_1.1\obj\Debug\Incomark_Robot_1.1.pdb
