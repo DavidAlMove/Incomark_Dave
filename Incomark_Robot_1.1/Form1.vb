@@ -54,6 +54,18 @@
         oBook = oExcel.Workbooks.Add
         oSheet = oBook.ActiveSheet
 
+        oSheet.Range("A1").Value = "Código Cliente"
+        oSheet.Range("B1").Value = "Nombre"
+        oSheet.Range("C1").Value = "Teléfono"
+        oSheet.Range("D1").Value = "Nombre referencia 1"
+        oSheet.Range("E1").Value = "Teléfono referencia 1"
+        oSheet.Range("F1").Value = "Nombre referencia 2"
+        oSheet.Range("G1").Value = "Teléfono referencia 2"
+        oSheet.Range("H1").Value = "Nombre referencia 3"
+        oSheet.Range("I1").Value = "Teléfono referencia 3"
+        oSheet.Range("J1").Value = "Nombre referencia 4"
+        oSheet.Range("K1").Value = "Teléfono referencia 4"
+
         Dim nombreHistorial As String
         Dim telefonoHistorial As String = "0"
         Dim nombreDatoPersonal1 As String = ""
@@ -147,6 +159,7 @@
             SendKeys.Send("^c") ' CTRL + C
             Threading.Thread.Sleep(500)
             SendKeys.Send("{ENTER}")
+
             Dim txtEnterado As String = Clipboard.GetText
             If txtEnterado.Trim = "¡Enterado!" Then
                 Threading.Thread.Sleep(500)
@@ -369,6 +382,8 @@
             Threading.Thread.Sleep(500)
             SendKeys.Send("Teléfono")
             Threading.Thread.Sleep(500)
+            SendKeys.Send("{ENTER}")
+            Threading.Thread.Sleep(500)
             SendKeys.Send("{TAB 2}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("{ENTER}")
@@ -391,186 +406,218 @@
             'SACAR EL TELEFONO 1 DE "DATOS PERSONALES"
 
             'SACAR EL NOMBRE 2 DE "DATOS PERSONALES"
-
-
-
-
-
-
-
             Threading.Thread.Sleep(500)
-            SendKeys.Send("^f")
+            SendKeys.Send("^f") 'CTRL + F
             Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER}")
+            SendKeys.Send("{BACKSPACE 8}")
             Threading.Thread.Sleep(500)
-            SendKeys.Send("{TAB 3}")
+            SendKeys.Send("nombre")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{ENTER 4}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{TAB 2}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("{ENTER}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{RIGHT}")
-            Threading.Thread.Sleep(500)
+            Threading.Thread.Sleep(250)
             SendKeys.Send("{DOWN}")
-            Threading.Thread.Sleep(500)
+            Threading.Thread.Sleep(200)
+            SendKeys.Send("{RIGHT}")
+            Threading.Thread.Sleep(250)
+            SendKeys.Send("{DOWN}")
+            Threading.Thread.Sleep(200)
             SendKeys.Send("{ENTER 2}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("^c") ' CTRL + C
-
-
-
+            Threading.Thread.Sleep(250)
+            SendKeys.Send("^c")
+            Threading.Thread.Sleep(250)
 
             Dim copiadoNombreDatoPersonal2 As String = Clipboard.GetText
-            If nombreDatoPersonal2.Contains("   ") Then
-                nombreDatoPersonal2 = copiadoNombreDatoPersonal2.Replace("   ", "")
-            End If
+            copiadoNombreDatoPersonal2 = copiadoNombreDatoPersonal2.Trim
+            'SACAR NOMBRE 2 DE DATOS PERSONALES
 
+
+            'SACAR TELEFONO 2 DE DATOS PERSONALES
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{ENTER 2}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("^f")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{BACKSPACE 6}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("Teléfono")
             Threading.Thread.Sleep(500)
             SendKeys.Send("{ENTER}")
             Threading.Thread.Sleep(500)
-            SendKeys.Send("^f") 'CTRL + F
+            SendKeys.Send("{TAB 2}")
             Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER 9}")
+            SendKeys.Send("{ENTER}")
             Threading.Thread.Sleep(500)
-            SendKeys.Send("{TAB 3}")
+            SendKeys.Send("{DOWN}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("{ENTER}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("{TAB 4}")
             Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER 2}")
+            SendKeys.Send("{ENTER}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("^c")
+            Threading.Thread.Sleep(500)
 
             Dim copiadoTelefonoDatoPersonal2 As String = Clipboard.GetText
-            If copiadoTelefonoDatoPersonal2.Contains(" ") And copiadoTelefonoDatoPersonal2.Contains(vbCrLf) Then
-                telefonoDatoPersonal2 = copiadoTelefonoDatoPersonal2.Replace(" ", "")
-                telefonoDatoPersonal2 = telefonoDatoPersonal2.Replace(vbCrLf, "")
-            Else
-                telefonoDatoPersonal2 = "N/A"
-            End If
+            copiadoTelefonoDatoPersonal2 = copiadoTelefonoDatoPersonal2.Trim
 
+            SendKeys.Send("{ENTER}")
+            'SACAR TELEFONO 2 DE DATOS PERSONALES
+
+
+            'SACAR EL NOMBRE 3 DE "DATOS PERSONALES"
             Threading.Thread.Sleep(500)
-            SendKeys.Send("^f")
+            SendKeys.Send("^f") 'CTRL + F
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{BACKSPACE 8}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("nombre")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{ENTER 6}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{TAB 2}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("{ENTER}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{TAB 3}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{RIGHT}")
-            Threading.Thread.Sleep(500)
+            Threading.Thread.Sleep(250)
             SendKeys.Send("{DOWN}")
-            Threading.Thread.Sleep(500)
+            Threading.Thread.Sleep(200)
+            SendKeys.Send("{RIGHT}")
+            Threading.Thread.Sleep(250)
+            SendKeys.Send("{DOWN}")
+            Threading.Thread.Sleep(200)
             SendKeys.Send("{ENTER 2}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("^c") ' CTRL + C
-
-
-
+            Threading.Thread.Sleep(250)
+            SendKeys.Send("^c")
+            Threading.Thread.Sleep(250)
 
             Dim copiadoNombreDatoPersonal3 As String = Clipboard.GetText
-            If nombreDatoPersonal3.Contains("   ") Then
-                nombreDatoPersonal3 = copiadoNombreDatoPersonal3.Replace("   ", "")
-            End If
+            copiadoNombreDatoPersonal3 = copiadoNombreDatoPersonal3.Trim
+            'SACAR NOMBRE 3 DE DATOS PERSONALES
 
+            'SACAR TELEFONO 3 DE DATOS PERSONALES
             Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("^f") 'CTRL + F
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER 9}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{TAB 3}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{TAB 4}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER 2}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("^c")
-
-            Dim copiadoTelefonoDatoPersonal3 As String = Clipboard.GetText
-            If copiadoTelefonoDatoPersonal3.Contains(" ") And copiadoTelefonoDatoPersonal3.Contains(vbCrLf) Then
-                telefonoDatoPersonal3 = copiadoTelefonoDatoPersonal3.Replace(" ", "")
-                telefonoDatoPersonal3 = telefonoDatoPersonal3.Replace(vbCrLf, "")
-            Else
-                telefonoDatoPersonal3 = "N/A"
-            End If
-
-
+            SendKeys.Send("{ENTER 3}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("^f")
             Threading.Thread.Sleep(500)
+            SendKeys.Send("{BACKSPACE 6}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("Teléfono")
+            Threading.Thread.Sleep(500)
             SendKeys.Send("{ENTER}")
             Threading.Thread.Sleep(500)
-            SendKeys.Send("{TAB 3}")
+            SendKeys.Send("{TAB 2}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("{ENTER}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{RIGHT}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("{DOWN}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER 2}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("^c") ' CTRL + C
-
-            Dim copiadoNombreDatoPersonal4 As String = Clipboard.GetText
-            If nombreDatoPersonal4.Contains("   ") Then
-                nombreDatoPersonal4 = copiadoNombreDatoPersonal4.Replace("   ", "")
-            End If
-
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("^f") 'CTRL + F
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER 9}")
-            Threading.Thread.Sleep(500)
-            SendKeys.Send("{TAB 3}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("{ENTER}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("{TAB 4}")
             Threading.Thread.Sleep(500)
-            SendKeys.Send("{ENTER 2}")
+            SendKeys.Send("{ENTER}")
             Threading.Thread.Sleep(500)
             SendKeys.Send("^c")
+            Threading.Thread.Sleep(500)
+
+            Dim copiadoTelefonoDatoPersonal3 As String = Clipboard.GetText
+            copiadoTelefonoDatoPersonal3 = copiadoTelefonoDatoPersonal3.Trim
+
+            SendKeys.Send("{ENTER}")
+            'SACAR TELEFONO 3 DE DATOS PERSONALES
+
+            ' - - - -- - 
+
+            'SACAR EL NOMBRE 4 DE "DATOS PERSONALES"
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("^f") 'CTRL + F
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{BACKSPACE 8}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("nombre")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{ENTER 8}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{TAB 2}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{ENTER}")
+            Threading.Thread.Sleep(250)
+            SendKeys.Send("{DOWN}")
+            Threading.Thread.Sleep(200)
+            SendKeys.Send("{RIGHT}")
+            Threading.Thread.Sleep(250)
+            SendKeys.Send("{DOWN}")
+            Threading.Thread.Sleep(200)
+            SendKeys.Send("{ENTER 2}")
+            Threading.Thread.Sleep(250)
+            SendKeys.Send("^c")
+            Threading.Thread.Sleep(250)
+
+            Dim copiadoNombreDatoPersonal4 As String = Clipboard.GetText
+            copiadoNombreDatoPersonal4 = copiadoNombreDatoPersonal4.Trim
+            'SACAR NOMBRE 4 DE DATOS PERSONALES
+
+            'SACAR TELEFONO 4 DE DATOS PERSONALES
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{ENTER 4}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("^f")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{BACKSPACE 6}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("Teléfono")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{ENTER}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{TAB 2}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{ENTER}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{DOWN}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{ENTER}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{TAB 4}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("{ENTER}")
+            Threading.Thread.Sleep(500)
+            SendKeys.Send("^c")
+            Threading.Thread.Sleep(500)
 
             Dim copiadoTelefonoDatoPersonal4 As String = Clipboard.GetText
-            If copiadoTelefonoDatoPersonal4.Contains(" ") And copiadoTelefonoDatoPersonal4.Contains(vbCrLf) Then
-                telefonoDatoPersonal4 = copiadoTelefonoDatoPersonal4.Replace(" ", "")
-                telefonoDatoPersonal4 = telefonoDatoPersonal4.Replace(vbCrLf, "")
-            Else
-                telefonoDatoPersonal4 = "N/A"
-            End If
+            copiadoTelefonoDatoPersonal4 = copiadoTelefonoDatoPersonal4.Trim
+
+            SendKeys.Send("{ENTER}")
+            'SACAR TELEFONO 4 DE DATOS PERSONALES
 
 
-            'Dim n As Integer = Integer.Parse(ii) + 2
-
-            'If nombreDatoPersonal1 = nombreDatoPersonal3 Or nombreDatoPersonal2 = nombreDatoPersonal4 Then
-            '    nombreDatoPersonal3 = "N/A"
-            '    nombreDatoPersonal4 = "N/A"
-            '    telefonoDatoPersonal3 = "N/A"
-            '    telefonoDatoPersonal4 = "N/A"
-            'End If
+            'SendKeys.Send("{F12}")
+            'Threading.Thread.Sleep(500)
+            'SendKeys.Send("{F5}")
+            'Threading.Thread.Sleep(500)
 
 
+            Dim XD As Integer = ii + 2
+            oSheet.Range("A" + XD.ToString()).Value = clave
+            oSheet.Range("B" + XD.ToString()).Value = copiadoNombreHistorial
+            oSheet.Range("C" + XD.ToString()).Value = copiadoTelefonoHistorial
+            oSheet.Range("D" + XD.ToString()).Value = copiadoNombreDatoPersonal1
+            oSheet.Range("E" + XD.ToString()).Value = copiadoTelefonoDatoPersonal1
+            oSheet.Range("F" + XD.ToString()).Value = copiadoNombreDatoPersonal2
+            oSheet.Range("G" + XD.ToString()).Value = copiadoTelefonoDatoPersonal2
+            oSheet.Range("H" + XD.ToString()).Value = copiadoNombreDatoPersonal3
+            oSheet.Range("I" + XD.ToString()).Value = copiadoTelefonoDatoPersonal3
+            oSheet.Range("J" + XD.ToString()).Value = copiadoNombreDatoPersonal4
+            oSheet.Range("K" + XD.ToString()).Value = copiadoTelefonoDatoPersonal4
 
-            arrayClave(ii) = clave
-            arrayNombreHistorial(ii) = copiadoNombreHistorial
-            arrayTelefonoHistorial(ii) = copiadoTelefonoHistorial
-            arrayNombreDatoPersonal1(ii) = nombreDatoPersonal1
-            arrayTelefonoDatoPersonal1(ii) = telefonoDatoPersonal1
-            arrayNombreDatoPersonal2(ii) = nombreDatoPersonal2
-            arrayTelefonoDatoPersonal2(ii) = telefonoDatoPersonal2
-            arrayNombreDatoPersonal3(ii) = nombreDatoPersonal3
-            arrayTelefonoDatoPersonal3(ii) = telefonoDatoPersonal3
-            arrayNombreDatoPersonal4(ii) = nombreDatoPersonal4
-            arrayTelefonoDatoPersonal4(ii) = telefonoDatoPersonal4
 
 
+pasar:
 
             'Threading.Thread.Sleep(8000)
             'Threading.Thread.Sleep(8000)
@@ -586,39 +633,6 @@
         Next
 
 terminar:
-
-        oSheet.Range("A1").Value = "Código Cliente"
-        oSheet.Range("B1").Value = "Nombre"
-        oSheet.Range("C1").Value = "Teléfono"
-        oSheet.Range("D1").Value = "Nombre referencia 1"
-        oSheet.Range("E1").Value = "Teléfono referencia 1"
-        oSheet.Range("F1").Value = "Nombre referencia 2"
-        oSheet.Range("G1").Value = "Teléfono referencia 2"
-        oSheet.Range("H1").Value = "Nombre referencia 3"
-        oSheet.Range("I1").Value = "Teléfono referencia 3"
-        oSheet.Range("J1").Value = "Nombre referencia 4"
-        oSheet.Range("K1").Value = "Teléfono referencia 4"
-
-        Dim n As Integer = 2
-        For Each registro As String In arrayClave
-            If arrayClave(n - 2) Is Nothing Then
-                n = n + 1
-            Else
-                oSheet.Range("A" + n.ToString()).Value = stringReader(n - 2)
-                oSheet.Range("B" + n.ToString()).Value = arrayNombreHistorial(n)
-                oSheet.Range("C" + n.ToString()).Value = arrayTelefonoHistorial(n)
-                oSheet.Range("D" + n.ToString()).Value = arrayNombreDatoPersonal1(n)
-                oSheet.Range("E" + n.ToString()).Value = arrayTelefonoDatoPersonal1(n)
-                oSheet.Range("F" + n.ToString()).Value = arrayNombreDatoPersonal2(n)
-                oSheet.Range("G" + n.ToString()).Value = arrayTelefonoDatoPersonal2(n)
-                oSheet.Range("H" + n.ToString()).Value = arrayNombreDatoPersonal3(n)
-                oSheet.Range("I" + n.ToString()).Value = arrayTelefonoDatoPersonal3(n)
-                oSheet.Range("J" + n.ToString()).Value = arrayNombreDatoPersonal4(n)
-                oSheet.Range("K" + n.ToString()).Value = arrayTelefonoDatoPersonal4(n)
-                n = n + 1
-            End If
-        Next
-
 
         oBook.Close(True, dirArchivoStatic, False)
         oExcel.Quit()
